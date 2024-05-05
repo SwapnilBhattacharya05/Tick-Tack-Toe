@@ -3,21 +3,28 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     background-color: #5f6165;
     text-align: center;
 }
 
+main {
+    position: relative;
+}
+
 .container {
+    position: relative;
     height: 70vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 /* giving 60% of the containers height each vmin is 1% of the viewport */
 .game {
+    position: relative;
     height: 60vmin;
     width: 60vmin;
     display: flex;
@@ -25,9 +32,11 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1.5vmin;
+    transition: all 1s;
 }
 
 .box {
+    color: #89f485;
     height: 18vmin;
     width: 18vmin;
     border-radius: 1rem;
@@ -35,7 +44,6 @@ body {
     outline: none;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     font-size: 8vmin;
-    color: #1be88c;
     background-color: #81a2ab;
 }
 
@@ -50,7 +58,7 @@ body {
 }
 
 #new-btn {
-    padding: 1rem;
+    padding: 1rem 2rem;
     font-size: 1.5rem;
     background-color: #50ee7d;
     color: black;
@@ -63,9 +71,23 @@ body {
 #msg {
     color: white;
     font-size: 5vmin;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-wrapper img {
+    width: 300px;
 
 }
 
 .msg-container {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    transition: all 2s;
     height: 30vmin;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
 }
